@@ -9,30 +9,34 @@ We see in the example below, that using a constructor saves us from calling the 
 
 <?php
 
- class fruit{
+class fruit
+{
 //properties
 
-public $name;
-public $color;
+    public $name;
+    public $color;
 
-function __construct($name,$color){
+    public function __construct($name, $color)
+    {
 
-        $this->name=$name;
-        $this->color=$color;
+        $this->name = $name;
+        $this->color = $color;
     }
-    function get_name(){
+    public function get_name()
+    {
 
         return $this->name;
     }
-    function get_color(){
+    public function get_color()
+    {
 
         return $this->color;
     }
 
 }
 
-$apple = new fruit("Apple","Green");
-echo $apple->get_name(); 
+$apple = new fruit("Apple", "Green");
+echo $apple->get_name();
 echo "<br>";
 echo $apple->get_color();
 
