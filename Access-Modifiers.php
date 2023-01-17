@@ -1,77 +1,81 @@
 <?php
 
-class base {
+class base
+{
 
-    Protected $name;
+    protected $name;
 
-    public function __construct($n){
-        $this->name=$n;
+    public function __construct($n)
+    {
+        $this->name = $n;
+    }
+    public function show()
+    {
+        echo "Your Name :" . $this->name . "<br>";
+
+    }
 }
-    public function show(){
-       echo "Your Name :".$this->name."<br>";
 
-}
-}
-
-
-$test= new base("Gautam");
+$test = new base("Gautam");
 // $test->name="Thakur";
 $test->show();
 
+class base1
+{
 
-class base1 {
+    protected $name;
 
-    Protected $name;
+    public function __construct($n)
+    {
+        $this->name = $n;
+    }
+    protected function show()
+    {
+        echo "Your Name :" . $this->name . "<br>";
 
-    public function __construct($n){
-        $this->name=$n;
-}
-    Protected function show(){
-       echo "Your Name :".$this->name."<br>";
-
-}
-}
-
-class derived  extends base1{
-    public function get(){
-        echo "Your Name :".$this->name."<br>";
- 
- }
+    }
 }
 
+class derived extends base1
+{
+    public function get()
+    {
+        echo "Your Name :" . $this->name . "<br>";
 
-$test= new derived("Gautam Thakur");
+    }
+}
+
+$test = new derived("Gautam Thakur");
 // $test->name="Thakur";
 $test->get();
 
+//-----------------Private
 
-//-----------------Private 
-
-class base2 {
+class base2
+{
 
     private $name;
 
-    public function __construct($n){
-        $this->name=$n;
-}
-    public function show(){
-       echo "Your Name :".$this->name."<br>";
+    public function __construct($n)
+    {
+        $this->name = $n;
+    }
+    public function show()
+    {
+        echo "Your Name :" . $this->name . "<br>";
 
-}
-}
-
-class derived2  extends base2{
-    public function get(){
-        echo "Your Name :".$this->name."<br>";
- 
- }
+    }
 }
 
+class derived2 extends base2
+{
+    public function get()
+    {
+        echo "Your Name :" . $this->name . "<br>";
 
-$test= new base2("Gautam Thakur Chauhan");
+    }
+}
+
+$test = new base2("Gautam Thakur Chauhan");
 // $test->name="Thakur";
 $test->show();
-
-
- 
-?>
